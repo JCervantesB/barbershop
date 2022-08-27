@@ -1,0 +1,1 @@
+<h1 class="text-3xl">Barber<span class="font-extrabold">App</span></h1>
