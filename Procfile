@@ -1,1 +1,1 @@
-web: vendor/bin/sail  public/
+web: vendor/bin/sail public/
