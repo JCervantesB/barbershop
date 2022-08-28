@@ -73,9 +73,9 @@ class cita_controller extends Controller
               carritos::where('user_id',auth()->user()->id)->delete();
             }
 
-            $fecha_cita = $request['fecha_cita'];
+            
              //Enviando un email al usuario autenticado enviando la clase que tiene el contenido del email
-            Mail::to(auth()->user()->email)->send(new cita_mail($fecha_cita));
+            Mail::to(auth()->user()->email)->send(new cita_mail());
 
             //imprimir un mensaje con la variable $session 
             return redirect()->route('servicios.cliente')->with('mensaje','Se ha agregado la cita satisfactoriamente');
