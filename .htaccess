@@ -1,5 +1,4 @@
-if (isset($_SERVER['PATH_INFO'])) {
-            $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
-        } else {
-            $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
-        }
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
