@@ -12,6 +12,10 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10"
     },
+    "post-install-cmd": [
+        "php artisan clear-compiled",
+        "chmod -R 777 public/"
+    ],
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.11",
