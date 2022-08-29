@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-nginx -C rewrite.conf www/
+web: cp .env.example .env && php artisan key:generate && heroku-php-apache2
